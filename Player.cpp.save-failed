@@ -1,0 +1,57 @@
+#include "Player.h"
+
+Player::Player() :  counter(0), frTime(sf::seconds(0.075)), pauseAnimation(false),
+                    Gravity(1.0f), jump(false){
+
+}
+Player::~Player(){
+
+
+}
+
+void Player::init(){
+
+    for(int i = 0; i < 8; i++){
+        anim.addFrame(sf::IntRect(128*i, 0, 128, 128));
+    }
+
+
+}
+void Player::update(sf::Time deltaTime){
+
+
+    texture.loadFromFile( "mecha_strip.png" , anim.getFrame(counter));
+    sprite.setTexture(texture);
+
+    cTime += deltaTime;
+    if(cTime >= frTime){
+        cTime = sf::microseconds(cTime.asMicroseconds() % frTime.asMicroseconds());
+        if(!pauseAnimation){
+            if(counter + 1 < 8){
+                counter++;
+            }else{
+                counter = 0;
+            }
+        }
+    }
+
+    if(input(sf::Keyboard::A)){ position.x -=1; pauseAnimation = false;}else
+    if(input(sf::Keyboard::D)){ position.x +=1; pauseAnimation = false;}else{pauseAnimation = true;}
+
+    if(input(sf::Keyboard::W))
+
+
+    sprite.setPosition(position);
+}
+void Player::draw(sf::RenderWindow* win){
+
+    win->draw(sprite);
+
+
+}
+
+bool Player::input(sf::Keyboard::Key k){
+
+    return sf::Keyboard::isKeyPressed(k);
+
+}

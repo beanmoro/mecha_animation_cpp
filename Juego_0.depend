@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1466195879 source:c:\users\benjamin\dropbox\proyectos\juego_0\game.cpp
+	"Game.h"
+
+1466195843 c:\users\benjamin\dropbox\proyectos\juego_0\game.h
+	"Essential_Include.h"
+	<SDL2/SDL.h>
+	"Animation.h"
+	"Player.h"
+
+1465953114 c:\users\benjamin\dropbox\proyectos\juego_0\essential_include.h
+	<SFML/Graphics.hpp>
+	<SFML/Window.hpp>
+	<SFML/System.hpp>
+	<iostream>
+
+1466018553 source:c:\users\benjamin\dropbox\proyectos\juego_0\main.cpp
+	"Game.h"
+
+1466196738 source:c:\users\benjamin\dropbox\proyectos\juego_0\animation.cpp
+	"Animation.h"
+
+1466196584 c:\users\benjamin\dropbox\proyectos\juego_0\animation.h
+	"Essential_Include.h"
+	<vector>
+
+1466403164 source:c:\users\benjamin\dropbox\proyectos\juego_0\player.cpp
+	"Player.h"
+
+1466196980 c:\users\benjamin\dropbox\proyectos\juego_0\player.h
+	"Essential_Include.h"
+	"Animation.h"
+
